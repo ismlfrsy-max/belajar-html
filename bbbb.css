@@ -1,0 +1,95 @@
+
+/* Styles moved from jokw.html (formatted) */
+
+:root {
+	--bg: #fafafa;
+	--card: #fff;
+	--accent: #7C3AED;
+	--text: #111827;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	font-family: system-ui, 'Segoe UI', Roboto, Arial;
+	background: linear-gradient(180deg, #5b21b6 0%, #3b185f 100%);
+	color: var(--text);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrap {
+	width: min(920px, 96%);
+	max-width: 820px;
+	background: var(--card);
+	padding: 28px;
+	border-radius: 12px;
+	box-shadow: 0 14px 48px rgba(2, 6, 23, 0.5);
+	border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+	margin: 0 0 10px 0;
+	color: #0f172a;
+}
+
+p.lead {
+	margin: 0 0 18px 0;
+	color: #475569;
+}
+
+.field {
+	display: flex;
+	gap: 8px;
+}
+
+input[type="password"] {
+	flex: 1;
+	padding: 10px 12px;
+	border-radius: 8px;
+	border: 1px solid #e6e6ef;
+	font-size: 1rem;
+}
+
+button {
+	padding: 10px 14px;
+	border-radius: 8px;
+	border: 0;
+	background: var(--accent);
+	color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+button.secondary {
+	background: transparent;
+	color: var(--text);
+	border: 1px solid rgba(2, 6, 23, 0.08);
+}
+
+.note {
+	margin-top: 12px;
+	color: #334155;
+	font-size: 0.95rem;
+}
+
+.err {
+	color: #b91c1c;
+	margin-top: 10px;
+	display: none;
+}
+
+.success {
+	color: #065f46;
+	margin-top: 10px;
+	display: none;
+}
+
+@media (max-width: 520px) {
+	.wrap {
+		padding: 18px;
+	}
+}
+
