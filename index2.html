@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cccc.css">
+</head>
+<body>
+    <div class="entrance" role="dialog" aria-label="box-masuk">
+        <h1>Selamat datang!</h1>
+        <p>Div ini muncul dari bawah saat halaman pertama kali dibuka.</p>
+        <p>     hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh  </p>
+        <div>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</div>
+            <!-- Textarea auto-expand: akan menambah tinggi saat mengetik -->
+            <label for="autoText" class="sr-only">Tulis sesuatu</label>
+            <textarea id="autoText" class="auto-textarea" placeholder="Ketik di sini — textarea ini otomatis bertambah ke bawah saat konten semakin banyak..."></textarea>
+        </div>
+
+        <script>
+            // Auto-resize textarea sederhana
+            (function(){
+                const ta = document.getElementById('autoText');
+                if(!ta) return;
+                function resize(){
+                    ta.style.height = 'auto';
+                    // tambahkan 2px agar tidak memotong teks pada beberapa browser
+                    ta.style.height = (ta.scrollHeight + 2) + 'px';
+                }
+                // Resize saat input, paste, atau load awal
+                ta.addEventListener('input', resize);
+                ta.addEventListener('change', resize);
+                window.addEventListener('load', resize);
+                // optional: jika ingin fokus otomatis
+                // ta.focus();
+            })();
+        </script>
+    </div>
+</body>
+</html>
